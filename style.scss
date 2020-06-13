@@ -1,0 +1,90 @@
+$color1: #caf0f8;
+$color2: white;
+$color3: #b8ebf5;
+$color4: #e8e4e1;
+$color5: #679b9b;
+
+@mixin centerThings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
+.container {
+    height: 100vh;
+    background-color: $color1;
+    @include centerThings();    
+    
+    .game-box {
+        background-color: $color2;
+        padding: 50px;
+        @include centerThings();
+
+        .scoreboard {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;;
+        }
+        .answers {
+            @include centerThings();
+
+            .answer {
+                height: 60px;
+                width: 300px;
+                margin: 5px;
+                border: 2px solid $color3;
+                border-radius: 30px;
+                background-color: white;
+                cursor: pointer;
+
+                &:focus {
+                    outline: none;
+                  }
+
+                &:hover {
+                    background-color: $color3;
+                }        
+            
+            }
+
+
+        }
+
+    }
+
+
+    .controls {
+        button {
+            padding: 15px;
+            margin: 20px;
+            background-color: $color2;
+            cursor: pointer;
+            border-radius: 15px;
+            border: 3px solid $color3;
+            &:hover {
+                background-color: $color5;
+                color: white;
+            }
+            
+            &:focus {
+                outline: none;
+              } 
+
+        }
+    }
+}
+
