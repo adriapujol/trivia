@@ -1,8 +1,10 @@
 $color1: #caf0f8;
 $color2: white;
 $color3: #b8ebf5;
-$color4: #e8e4e1;
+$color4: #f5d057;
 $color5: #679b9b;
+$correct: #71e07a;
+$wrong: #f07f7b;
 
 @mixin centerThings {
     display: flex;
@@ -56,9 +58,15 @@ body {
                   }
 
                 &:hover {
-                    background-color: $color3;
+                    background-color: $color4;
                 }        
             
+            }
+            .correct {
+                background-color: $correct;
+            }
+            .wrong {
+                background-color: $wrong;
             }
 
 
@@ -67,8 +75,8 @@ body {
     }
 
 
-    .controls {
-        button {
+    .control {
+
             padding: 15px;
             margin: 20px;
             background-color: $color2;
@@ -76,7 +84,7 @@ body {
             border-radius: 15px;
             border: 3px solid $color3;
             &:hover {
-                background-color: $color5;
+                background-color: $color3;
                 color: white;
             }
             
@@ -84,7 +92,14 @@ body {
                 outline: none;
               } 
 
-        }
     }
+
+
+    .hide {
+        display: none;
+    }
+
+
 }
+
 

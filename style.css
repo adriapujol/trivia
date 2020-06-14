@@ -47,9 +47,15 @@ body {
   outline: none;
 }
 .container .game-box .answers .answer:hover {
-  background-color: #b8ebf5;
+  background-color: #f5d057;
 }
-.container .controls button {
+.container .game-box .answers .correct {
+  background-color: #71e07a;
+}
+.container .game-box .answers .wrong {
+  background-color: #f07f7b;
+}
+.container .control {
   padding: 15px;
   margin: 20px;
   background-color: white;
@@ -57,12 +63,15 @@ body {
   border-radius: 15px;
   border: 3px solid #b8ebf5;
 }
-.container .controls button:hover {
-  background-color: #679b9b;
+.container .control:hover {
+  background-color: #b8ebf5;
   color: white;
 }
-.container .controls button:focus {
+.container .control:focus {
   outline: none;
+}
+.container .hide {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
