@@ -21,6 +21,8 @@ $wrong: #f07f7b;
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
+
 
 
 }
@@ -38,8 +40,17 @@ body {
 
         .scoreboard {
             width: 100%;
-            display: flex;
-            justify-content: space-between;;
+            @include centerThings();
+            font-size: 3rem;
+            color: $color5; 
+
+            .before-score {
+                font-size: 1.5rem;
+            }
+
+        }
+        .final {
+            color: $color4;
         }
         .answers {
             @include centerThings();

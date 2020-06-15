@@ -70,6 +70,7 @@ const UIController = (()=> {
         countdown: 'countdown',
         correct: 'correct',
         wrong: 'wrong',
+        final: 'final',
 
     }
 
@@ -131,7 +132,7 @@ const controller = ((dataCtrl, UIctrl)=> {
           score = document.getElementById(DOM.score),
           question = document.getElementById(DOM.question),
           choices = document.getElementById(DOM.choices),
-          countdown = document.getElementById(DOM.countdown),
+          final = document.getElementById(DOM.final),
           btnNext = document.getElementById(DOM.btnNext);
           
     let answersCount = 0;
@@ -180,10 +181,25 @@ const controller = ((dataCtrl, UIctrl)=> {
             UIctrl.clearGameBox(question, choices);
             displayQuestion();
         } else {
-            alert('game over');
             UIctrl.clearGameBox(question, choices);
             removeNextButton();
+            endGame();
         }
+    }
+
+    const resetQuestions = () => {
+        for (item in game.questions) {
+            game.questions[item].answered = false;
+        }
+    }
+
+    const endGame = () => {
+        final.classList.remove('hide');
+        let span = document.createElement('span');
+        span.innerHTML = 'Your Score is: ';
+        span.className = 'before-score';
+        score.parentNode.insertBefore(span, score);
+        // btnStart.classList.remove('hide');
     }
 
     const nextButton = () => {
