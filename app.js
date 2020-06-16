@@ -30,7 +30,7 @@ const dataController = (()=> {
     const question6 = new Question(6, "What is a rhino's horn made of?", ['Ivori', 'Hair', 'You dreams and hopes', 'Definetly a penis'], 'Hair');
     const question7 = new Question(7, 'Can a kangaroo fart?', ['Yes', 'No', 'Only after eating Taco Bell'], 'No');
     const question8 = new Question(8, "How many vaginas does female Koala Bears have?", ["1", "2", "0", "4"], "2");
-    const question9 = new Question(9, 'Are dolphins the worst?', ['Yes! F*ck those rapist!', 'Not at all', 'Flipper was good so they are cool', 'Flipper sucks too'], 'Yes! F*ck these rapist!');
+    const question9 = new Question(9, 'Are dolphins the worst?', ['Yes! F*ck those rapist!', 'Not at all', 'Flipper was good so they are cool', 'Flipper sucks too'], 'Yes! F*ck those rapist!');
     const question10 = new Question(10, "What is the take away of this?", ["No idea, I have the brain of an ostrich", "F*ck the dolphins", "Rhino's horns are lame", "Sharks and female Koalas are a perfect match"], "Sharks and female Koalas are a perfect match");
 
     
