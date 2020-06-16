@@ -39,6 +39,10 @@ body {
         font-size: 3rem;
         color: white;
         text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        
+    }
     }
     
     .game-box {

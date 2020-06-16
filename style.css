@@ -26,6 +26,11 @@ body {
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 500px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+}
 .container .game-box {
   background-color: white;
   padding: 50px;
