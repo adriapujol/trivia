@@ -31,10 +31,17 @@ body {
 .container {
     height: 100vh;
     background-color: $color1;
-    @include centerThings();    
+    @include centerThings();   
+    
+    h1 {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
+    }
     
     .game-box {
         background-color: $color2;
+        // width: 80%;
         padding: 50px;
         @include centerThings();
 
@@ -43,6 +50,11 @@ body {
             @include centerThings();
             font-size: 3rem;
             color: $color5; 
+
+            @media (max-width: 500px) {
+                font-size: 1.5rem;
+            
+        }
 
             .before-score {
                 font-size: 1.5rem;
@@ -54,10 +66,10 @@ body {
         }
         .answers {
             @include centerThings();
-
+            width: 100%;
             .answer {
                 height: 60px;
-                width: 300px;
+                min-width: 300px;
                 margin: 5px;
                 border: 2px solid $color3;
                 border-radius: 30px;
@@ -81,6 +93,13 @@ body {
             }
 
 
+        }
+
+        @media (max-width: 500px) {
+                // height: 100%;
+                width: 100%;
+                padding: 30px 10px;
+            
         }
 
     }
