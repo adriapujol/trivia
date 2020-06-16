@@ -78,7 +78,7 @@ body {
 .container .game-box .answers .answer:focus {
   outline: none;
 }
-@media (min-width: 500px) {
+@media not all and (pointer: coarse) {
   .container .game-box .answers .answer:hover {
     background-color: #f5d057;
   }
