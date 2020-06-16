@@ -34,6 +34,8 @@ body {
     @include centerThings();   
     
     h1 {
+        width: 100%;
+        @include centerThings();
         font-size: 3rem;
         color: white;
         text-shadow: 2px 2px 2px rgb(0, 0, 0, 0.5);
@@ -79,10 +81,12 @@ body {
                 &:focus {
                     outline: none;
                   }
-
-                &:hover {
-                    background-color: $color4;
-                }        
+                @media (min-width: 500px) {
+                    &:hover {
+                        background-color: $color4;
+                    }
+                }
+      
             
             }
             .correct {
